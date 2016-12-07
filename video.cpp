@@ -226,6 +226,10 @@ int main(int argc, char* argv[])
 		//filtered object
 		if (trackObjects)
 			trackFilteredObject(x, y, threshold, cameraFeed);
+		if (useMorphOps)
+			morphOps(threshold);
+		if (trackObjects)
+			trackFilteredObject(x, y, threshold, cameraFeed);
 
 		//show frames
 		imshow(windowName2, threshold);
